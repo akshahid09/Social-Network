@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instagram Clone</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="i-style.css" />
+</head>
+<body>
+  <nav>
+    <div class="container">
+        <a href="index.html" class="logo">.Social Network</a>
+        
+        <div class="icons">
+            <div class="icon" onclick="navigateTo('search.html')">
+                <i class="fas fa-search"></i>
+                <span>Search</span>
+            </div>
+            <div class="icon" onclick="navigateTo('home.html')">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </div>
+            <div class="icon" onclick="navigateTo('video.html')">
+                <i class="fas fa-video"></i>
+                <span>Video</span>
+            </div>
+            <div class="icon" onclick="navigateTo('reels.html')">
+                <i class="fas fa-film"></i>
+                <span>Reels</span>
+            </div>
+            <div class="icon" onclick="navigateTo('image.html')">
+                <i class="fas fa-image"></i>
+                <span>Post</span>
+            </div>
+            <div class="icon" onclick="navigateTo('writing.html')">
+                <i class="fas fa-pencil-alt"></i>
+                <span>Blog</span>
+            </div>
+            <div class="icon" onclick="navigateTo('tv.html')">
+                <i class="fas fa-tv"></i>
+                <span>TV</span>
+            </div>
+            <div class="icon" onclick="navigateTo('marketplace.html')">
+                <i class="fas fa-shopping-cart"></i>
+                <span>Marketplace</span>
+            </div>
+            <div class="profile-pic" onclick="navigateTo('profile.html')">
+                <img src="img/285728136_3242709079319208_4283599232997691488_n.jpg" alt="Profile Picture" />
+                <span>Profile</span>
+            </div>
+        </div>
+        <div class="create">
+            <label class="btn btn-primary" for="create-post">Sign up/Log in</label>
+        </div>
+    </div>
+</nav>
+  <!--<nav>
+        <div class="container">
+            <h2 class="logo">Instagram</h2>
+            <input type="text" class="search-bar" placeholder="Search" />
+            <div class="icons">
+                <div class="icon" onclick="navigateTo('home.html')">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </div>
+                <div class="icon" onclick="navigateTo('messages.html')">
+                    <i class="fas fa-paper-plane"></i>
+                    <span>Messages</span>
+                </div>
+                <div class="icon" onclick="navigateTo('explore.html')">
+                    <i class="fas fa-compass"></i>
+                    <span>Explore</span>
+                </div>
+                <div class="icon" onclick="navigateTo('notifications.html')">
+                    <i class="fas fa-heart"></i>
+                    <span>Notifications</span>
+                </div>
+                <div class="icon" onclick="navigateTo('profile.html')">
+                    <img src="img/285728136_3242709079319208_4283599232997691488_n.jpg" alt="Profile Picture" class="profile-pic"/>
+                </div>
+            </div>
+        </div>
+    </nav>
+-->  
+    <div class="feed">
+        <div class="post">
+            <div class="post-header">
+                <img src="img/441476573_3770485936541517_4857557028418191221_n.jpg" alt="User Profile" class="user-profile" />
+                <span class="username">user123</span>
+            </div>
+            <img src="img/449412973_3800950850161692_2171774212670716349_n.jpg" alt="Post Image" class="post-image" />
+            <div class="post-actions">
+                <i class="far fa-heart"></i>
+                <i class="far fa-comment"></i>
+                <i class="far fa-paper-plane"></i>
+            </div>
+            <div class="post-likes">123 likes</div>
+            <div class="post-caption">
+                <span class="username">user123</span> Caption text here...
+            </div>
+            <div class="post-comments">View all 10 comments</div>
+            <div class="add-comment">
+                <input type="text" placeholder="Add a comment..." />
+                <button>Post</button>
+            </div>
+        </div>
+        <div class="feed">
+          <div class="post">
+              <div class="post-header">
+                  <img src="img/Habib wahid.jpeg" alt="User Profile" class="user-profile" />
+                  <span class="username">user123</span>
+              </div>
+              <img src="img/Anisul Islam Bobby.jpg" alt="Post Image" class="post-image" />
+              <div class="post-actions">
+                  <i class="far fa-heart"></i>
+                  <i class="far fa-comment"></i>
+                  <i class="far fa-paper-plane"></i>
+              </div>
+              <div class="post-likes">123 likes</div>
+              <div class="post-caption">
+                  <span class="username">user123</span> Caption text here...
+              </div>
+              <div class="post-comments">View all 10 comments</div>
+              <div class="add-comment">
+                  <input type="text" placeholder="Add a comment..." />
+                  <button>Post</button>
+              </div>
+          </div>
+          <div class="feed">
+            <div class="post">
+                <div class="post-header">
+                    <img src="img/arnob.jpg" alt="User Profile" class="user-profile" />
+                    <span class="username">user123</span>
+                </div>
+                <img src="img/Tanjin Tisha.jpg" alt="Post Image" class="post-image" />
+                <div class="post-actions">
+                    <i class="far fa-heart"></i>
+                    <i class="far fa-comment"></i>
+                    <i class="far fa-paper-plane"></i>
+                </div>
+                <div class="post-likes">123 likes</div>
+                <div class="post-caption">
+                    <span class="username">user123</span> Caption text here...
+                </div>
+                <div class="post-comments">View all 10 comments</div>
+                <div class="add-comment">
+                    <input type="text" placeholder="Add a comment..." />
+                    <button>Post</button>
+                </div>
+            </div>
+            <div class="feed">
+              <div class="post">
+                  <div class="post-header">
+                      <img src="img/Ishrat Zaheen Ahmed.jpeg" alt="User Profile" class="user-profile" />
+                      <span class="username">user123</span>
+                  </div>
+                  <img src="img/Rakin Absar.jpeg" alt="Post Image" class="post-image" />
+                  <div class="post-actions">
+                      <i class="far fa-heart"></i>
+                      <i class="far fa-comment"></i>
+                      <i class="far fa-paper-plane"></i>
+                  </div>
+                  <div class="post-likes">123 likes</div>
+                  <div class="post-caption">
+                      <span class="username">user123</span> Caption text here...
+                  </div>
+                  <div class="post-comments">View all 10 comments</div>
+                  <div class="add-comment">
+                      <input type="text" placeholder="Add a comment..." />
+                      <button>Post</button>
+                  </div>
+              </div>
+        <!-- More posts can be added here -->
+    </div>
+
+
+    <script src="index.js"></script>
+    <script>
+        // Simple navigation function (replace with actual routing or link navigation)
+function navigateTo(page) {
+  window.location.href = page;
+}
+
+// For demonstration purposes, we'll just log the click events
+document.addEventListener('DOMContentLoaded', () => {
+  const postActions = document.querySelectorAll('.post-actions i');
+  postActions.forEach(action => {
+      action.addEventListener('click', () => {
+          console.log(`Action clicked: ${action.classList}`);
+      });
+  });
+
+  const commentButtons = document.querySelectorAll('.add-comment button');
+  commentButtons.forEach(button => {
+      button.addEventListener('click', () => {
+          console.log('Post comment clicked');
+      });
+  });
+});
+
+    </script>
+</body>
+</html>

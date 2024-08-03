@@ -1,0 +1,310 @@
+/*body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f8fa;
+}
+
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav {
+    width: 250px;
+    padding: 20px;
+}
+
+.nav-items {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.nav-items i {
+    font-size: 24px;
+    color: #1da1f2;
+    margin-bottom: 20px;
+}
+
+.nav-items ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+}
+
+.nav-items ul li {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.nav-items ul li i {
+    margin-right: 10px;
+    font-size: 20px;
+}
+*/
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #fafafa;
+}
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --border-radius: 2rem;
+    --card-border-radius: 1rem;
+    --btn-padding: 0.6rem 2rem;
+    --search-padding: 0.6rem 1rem;
+    --card-padding: 1rem;
+    --color-white: hsl(252, 30%, 100%);
+    --color-gray: hsl(252, 15%, 65%);
+    --color-light:hsl(252, 30%, 90%);
+    --color-dark: hsl(252, 30%, 17%);
+    --color-primary: hsl(252, 75%, 60%);
+    --color-success: hsl(120, 95%, 60%);
+    --color-danger: hsl(0, 95%, 65%);
+    --color-black: hsl(252, 30%, 10%);
+    --sticky-top-left: 5.4rem;
+    --sticky-top-right: -18rem;
+    }
+    
+    
+    *,*::before,*::after{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        list-style: none;
+        border: 0;
+    }
+    
+    body{
+        font-family: 'Poppins', sans-serif;
+        color: var(--color-dark);
+        background: white ;
+        overflow-x: hidden;
+    }
+    
+    
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        .container a{
+            cursor: pointer;
+            font-size:30px ;
+            font-weight: 500;
+        }
+        
+        .profile-pic {
+            width: 2rem;
+            aspect-ratio: 1/1;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+        .profile-pic:hover{
+            opacity: 0.7;
+        }
+        .profile-pic:active{
+            opacity: 0.3;
+        }
+        
+        img {
+            display: block;
+            width: 100%;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: var(--btn-padding);
+            font-weight: 500;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: all 300ms ease;
+        }
+        
+        .btn:hover {
+            opacity: 0.8;
+        }
+        
+        .btn-primary {
+            background: var(--color-primary);
+            color: white;
+        }
+        
+        .text-bold {
+            font-weight: 500;
+        }
+        
+        .text-muted {
+            color: var(--color-gray);
+        }
+        
+        nav {
+            width: 100%;
+            padding: 0.7rem 0;
+            position: fixed;
+            top: 0;
+            z-index: 10;
+            background: lightblue;
+        }
+        
+        nav .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .search-bar {
+            background: transparent;
+            border-radius: var(--border-radius);
+            padding: var(--search-padding);
+            display: flex;
+            align-items: center;
+        }
+        
+        .search-bar input[type="search"] {
+            background: transparent;
+            width: 30vw;
+            border: none;
+            outline: none;
+            color: var(--color-dark);
+        }
+        
+        .search-bar input[type="search"]::placeholder {
+            color: var(--color-gray);
+        }
+        
+        nav .icons {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        nav .icon {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+            color: var(--color-dark);
+            transition: color 0.3s;
+        }
+        
+        nav .icon i {
+            font-size: 1.5rem;
+        }
+        
+        nav .icon span {
+            font-size: 0.8rem;
+        }
+        
+        nav .icon:hover,
+        nav .icon.active {
+            color: var(--color-primary);
+        }
+        
+        nav .create {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+.tweet-button {
+    background-color: #1da1f2;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    border-left: 1px solid #e1e8ed;
+    border-right: 1px solid #e1e8ed;
+    margin-top: 110px;
+}
+
+.tweet-input {
+    display: flex;
+    align-items: flex-start;
+    padding: 20px;
+    border-bottom: 1px solid #e1e8ed;
+    background-color: white;
+}
+
+.profile-pic {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: contain;
+}
+
+.tweet-textarea {
+    width: 100%;
+    border: none;
+    font-size: 18px;
+    resize: none;
+    outline: none;
+}
+
+.tweet-feed {
+    margin-top: 20px;
+}
+
+.tweet {
+    display: flex;
+    padding: 15px;
+    border-bottom: 1px solid #e1e8ed;
+    background-color: white;
+}
+
+.tweet-profile-pic {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.tweet-content {
+    flex: 1;
+}
+
+.tweet-header {
+    display: flex;
+    align-items: center;
+}
+
+.tweet-username {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.tweet-handle {
+    color: #657786;
+    margin-right: 5px;
+}
+
+.tweet-time {
+    color: #657786;
+}
+
+.tweet-body {
+    margin: 10px 0;
+}
+
+.tweet-actions i {
+    margin-right: 20px;
+    cursor: pointer;
+}

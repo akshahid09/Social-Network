@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+:root {
+    --border-radius: 2rem;
+    --card-border-radius: 1rem;
+    --btn-padding: 0.6rem 2rem;
+    --search-padding: 0.6rem 1rem;
+    --card-padding: 1rem;
+    --color-white: hsl(252, 30%, 100%);
+    --color-gray: hsl(252, 15%, 65%);
+    --color-light: hsl(252, 30%, 90%);
+    --color-dark: hsl(252, 30%, 17%);
+    --color-primary: hsl(252, 75%, 60%);
+    --color-success: hsl(120, 95%, 60%);
+    --color-danger: hsl(0, 95%, 65%);
+    --color-black: hsl(252, 30%, 10%);
+    --sticky-top-left: 5.4rem;
+    --sticky-top-right: -18rem;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    border: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--color-dark);
+    background: white;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+.container a{
+    cursor: pointer;
+    font-size:30px ;
+    font-weight: 500;
+}
+
+.profile-pic {
+    width: 2.7rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+.btn {
+    display: inline-block;
+    padding: var(--btn-padding);
+    font-weight: 500;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.btn-primary {
+    background: var(--color-primary);
+    color: white;
+}
+
+.text-bold {
+    font-weight: 500;
+}
+
+.text-muted {
+    color: var(--color-gray);
+}
+
+nav {
+    width: 100%;
+    padding: 0.7rem 0;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    background: lightblue;
+}
+
+nav .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search-bar {
+    background: transparent;
+    border-radius: var(--border-radius);
+    padding: var(--search-padding);
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input[type="search"] {
+    background: transparent;
+    width: 30vw;
+    border: none;
+    outline: none;
+    color: var(--color-dark);
+}
+
+.search-bar input[type="search"]::placeholder {
+    color: var(--color-gray);
+}
+
+nav .icons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+nav .icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    color: var(--color-dark);
+    transition: color 0.3s;
+}
+
+nav .icon i {
+    font-size: 1.5rem;
+}
+
+nav .icon span {
+    font-size: 0.8rem;
+}
+
+nav .icon:hover,
+nav .icon.active {
+    color: var(--color-primary);
+}
+
+nav .create {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.inbox-container {
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: var(--color-light);
+}
+
+.inbox {
+    width: 80%;
+    max-width: 1200px;
+    display: flex;
+    gap: 20px;
+}
+
+.messages-list, .conversation {
+    flex: 1;
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.messages-list {
+    max-width: 300px;
+}
+
+.heading {
+    background: lightblue;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.heading h4 {
+    font-size: 1.2rem;
+}
+
+.heading select {
+    padding: 0.5rem;
+    border: 1px solid var(--color-gray);
+    border-radius: var(--border-radius);
+    background: white;
+}
+
+.search-bar {
+    padding: var(--search-padding);
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    background: var(--color-light);
+}
+
+.search-bar input {
+    width: 100%;
+    border-radius: var(--border-radius);
+    padding: var(--search-padding);
+    margin-left: 0.5rem;
+    border: 1px solid var(--color-gray);
+}
+
+.message {
+    display: flex;
+    align-items: center;
+    padding: var(--card-padding);
+    cursor: pointer;
+    border-bottom: 1px solid var(--color-light);
+}
+
+.message:hover {
+    background: var(--color-light);
+}
+
+.message .profile-pic {
+    position: relative;
+}
+
+.message .profile-pic img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.message .active {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 12px;
+    width: 12px;
+    background: var(--color-success);
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+.message-body {
+    margin-left: 1rem;
+    width: 100%;
+}
+
+.message-body h5 {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.message-body p {
+    font-size: 0.9rem;
+    color: var(--color-gray);
+}
+
+.message-body p.text-bold {
+    color: var(--color-dark);
+    font-weight: 600;
+}
+
+.conversation {
+    flex-grow: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.conversation-header {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background: lightblue;
+    color: white;
+}
+
+.conversation-header img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.conversation-body {
+    padding: 1rem;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.message-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.message-item img {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.message-item p {
+    padding: 0.5rem 1rem;
+    background: var(--color-light);
+    border-radius: var(--border-radius);
+    max-width: 60%;
+}
+
+.input-section {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background: var(--color-light);
+}
+
+.input-section i {
+    font-size: 1.5rem;
+    color: var(--color-gray);
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    background: white;
+    border-radius: var(--border-radius);
+    padding: var(--search-padding);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.input-container input {
+    width: 100%;
+    border: none;
+    padding: 0.5rem;
+    outline: none;
+}
+
+.extra-icons {
+    display: flex;
+    align-items: center;
+}
+
+.extra-icons i {
+    margin-left: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}

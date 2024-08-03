@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messenger</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="msngr.css">
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="index.html" class="logo">.Social Network</a>            
+            <div class="icons">
+                <div class="icon" onclick="navigateTo('search.html')">
+                    <i class="fas fa-search"></i>
+                    <span>Search</span>
+                </div>
+                <div class="icon" onclick="navigateTo('home.html')">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </div>
+                <div class="icon" onclick="navigateTo('video.html')">
+                    <i class="fas fa-video"></i>
+                    <span>Video</span>
+                </div>
+                <div class="icon" onclick="navigateTo('reels.html')">
+                    <i class="fas fa-film"></i>
+                    <span>Reels</span>
+                </div>
+                <div class="icon" onclick="navigateTo('image.html')">
+                    <i class="fas fa-image"></i>
+                    <span>Image</span>
+                </div>
+                <div class="icon" onclick="navigateTo('writing.html')">
+                    <i class="fas fa-pencil-alt"></i>
+                    <span>Writing</span>
+                </div>
+                <div class="icon" onclick="navigateTo('tv.html')">
+                    <i class="fas fa-tv"></i>
+                    <span>TV</span>
+                </div>
+                <div class="icon" onclick="navigateTo('marketplace.html')">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span>Marketplace</span>
+                </div>
+                <div class="profile-pic" onclick="navigateTo('profile.html')">
+                    <img src="img/285728136_3242709079319208_4283599232997691488_n.jpg" alt="Profile Picture" />
+                    <span>Profile</span>
+                </div>
+            </div>
+            <div class="create">
+                <label class="btn btn-primary" for="create-post">Sign up/Log in</label>
+            </div>
+        </div>
+    </nav>
+    <div class="inbox-container">
+        <div class="inbox">
+            <div class="messages-list">
+                <div class="heading">
+                    <h4>Messages</h4>
+                    <select>
+                        <option value="primary">Primary</option>
+                        <option value="general">General</option>
+                        <option value="requests">Requests (7)</option>
+                    </select>
+                </div>
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="search" placeholder="Search Messages" id="message-search">
+                </div>
+                <div class="message" onclick="openConversation('Kareena Joshua', 'img/Mehazabien Chowdhury.jpeg', 'Just woke up bruh..')">
+                    <div class="profile-pic">
+                        <img src="img/Mehazabien Chowdhury.jpeg" alt="Profile">
+                        <div class="active"></div>
+                    </div>
+                    <div class="message-body">
+                        <h5>Kareena Joshua</h5>
+                        <p class="text-muted">Just woke up bruh..</p>
+                    </div>
+                </div>
+                <div class="message" onclick="openConversation('Dan Smith', 'img/Sunhera Tasnim.jpeg', 'Where are you now>?')">
+                    <div class="profile-pic">
+                        <img src="img/Sunhera Tasnim.jpeg" alt="Profile">
+                        <div class="active"></div>
+                    </div>
+                    <div class="message-body">
+                        <h5>Dan Smith</h5>
+                        <p class="text-bold">Where are you now>?</p>
+                    </div>
+                </div>                             
+                <div class="message" onclick="openConversation('Chris Brown', 'img/Ishrat Zaheen Ahmed.jpeg', 'Lol u right')">
+                    <div class="profile-pic">
+                        <img src="img/Ishrat Zaheen Ahmed.jpeg">
+                    </div>
+                    <div class="message-body">
+                        <h5>Chris Brown</h5>
+                        <p class="text-muted">Lol u right</p>
+                    </div>
+                </div>                             
+                <div class="message" onclick="openConversation('Lana Rose', 'img/Tahsan (2).jpeg', 'Birthday tomorrow!!')">
+                    <div class="profile-pic">
+                        <img src="img/Tahsan (2).jpeg">
+                    </div>
+                    <div class="message-body">
+                        <h5>Lana Rose</h5>
+                        <p class="text-bold">Birthday tomorrow!!</p>
+                    </div>
+                </div>                             
+                <div class="message" onclick="openConversation('Varun Nair', 'img/Saba Chowdhury.jpeg', 'Ssup?')">
+                    <div class="profile-pic">
+                        <img src="img/Saba Chowdhury.jpeg">
+                    </div>
+                    <div class="message-body">
+                        <h5>Varun Nair</h5>
+                        <p class="text-muted">Ssup?</p>
+                    </div>
+                </div>                             
+                <div class="message" onclick="openConversation('Jahnvi Doifode', 'img/Nadia Khanom.jpg', 'Told ya')">
+                    <div class="profile-pic">
+                        <img src="img/Nadia Khanom.jpg">
+                        <div class="active"></div>
+                    </div>
+                    <div class="message-body">
+                        <h5>Jahnvi Doifode</h5>
+                        <p class="text-bold">Told ya</p>
+                    </div>
+                </div>
+                <!-- Repeat other messages in the same format -->
+            </div>
+            <div class="conversation">
+                <div id="conversation-content">
+                    <!-- Conversation content will be displayed here -->
+                </div>
+                <div class="input-section">
+                    <i class="fas fa-camera"></i>
+                    <div class="input-container">
+                        <i class="fas fa-microphone"></i>
+                        <input type="text" placeholder="Share your thoughts">
+                    </div>
+                    <div class="extra-icons">
+                        <i class="fas fa-smile"></i>
+                        <i class="fas fa-image"></i>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function openConversation(name, imgSrc, message) {
+            const conversationContent = document.getElementById('conversation-content');
+            conversationContent.innerHTML = `
+                <div class="conversation-header">
+                    <img src="${imgSrc}" alt="Profile">
+                    <h5>${name}</h5>
+                </div>
+                <div class="conversation-body">
+                    <div class="message-item">
+                        <img src="${imgSrc}" alt="Profile">
+                        <p>${message}</p>
+                    </div>
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>
